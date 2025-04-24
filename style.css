@@ -1,0 +1,113 @@
+/* Ny CSS för väderappen med fokus på små kort */
+
+/* Allmänt */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Ljus bakgrund */
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a90e2; /* Ljusblå header */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.current-temperature {
+    font-size: 1.2em; /* Smaller font size */
+    font-weight: normal; /* Normal text weight */
+    color: #333; /* Darker color to blend in */
+    margin: 10px 0; /* Slightly smaller margin */
+    text-shadow: none; /* Remove text shadow */
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sökformulär */
+#search-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#city-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #357ab8;
+}
+
+/* Väderprognos */
+#forecast {
+    display: flex;
+    flex-wrap: wrap; /* Låt korten radbrytas vid behov */
+    gap: 15px; /* Mellanrum mellan korten */
+    justify-content: center;
+}
+
+.day {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 120px; /* Smala kort för varje dag */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.day:hover {
+    transform: scale(1.05); /* Lätt förstoring vid hovring */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.day h3 {
+    margin: 0;
+    font-size: 0.9em; /* Minska textstorleken */
+    color: #333; /* Mörkare färg för bättre kontrast */
+    font-weight: bold; /* Fetstil för rubriker */
+}
+
+.day p {
+    margin: 5px 0;
+    font-size: 1em; /* Minska textstorleken */
+    color: #666; /* Ljusare färg för mindre viktig text */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
